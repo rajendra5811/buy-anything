@@ -81,7 +81,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from SalesOrders where OrderDate>'@{activity('lastdate').output.value[0].lastdate}' and OrderDate<='@{activity('maxdate').output.value[0].maximumdate}'",
+							"value": "select * from SalesOrders where OrderDate>'@{activity('lastdate').output.firstRow.lastdate}' and OrderDate<='@{activity('maxdate').output.firstRow.maximumdate}'\n\n",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -143,7 +143,7 @@
 					"storedProcedureParameters": {
 						"myvar": {
 							"value": {
-								"value": "@activity('maxdate').output.value[0].maximumdate",
+								"value": "@activity('maxdate').output.firstRow.maximumdate",
 								"type": "Expression"
 							},
 							"type": "DateTime"
