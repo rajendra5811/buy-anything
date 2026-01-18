@@ -1,0 +1,9 @@
+{
+	"name": "buyanythingdf1",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "bc2b4667-bb30-44d7-a31f-8dd23451d9fa",
+		"tenantId": "72f8e370-0fb4-4883-9c15-9617ba8732f6"
+	}
+}
