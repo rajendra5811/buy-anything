@@ -81,7 +81,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from SalesOrders Where OrderDate>'@{activity('lastdate').output.value[0].lastdate}' and OrderDate<='@{activity('maxdate').output.value[0].maximumdate}'",
+							"value": "select * from SalesOrders where OrderDate>'@{activity('lastdate').output.value[0].lastdate}' and OrderDate<='@{activity('maxdate').output.value[0].maximumdate}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -114,13 +114,13 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Parquet1",
+						"referenceName": "Parquet2",
 						"type": "DatasetReference"
 					}
 				]
 			},
 			{
-				"name": "updatedateholder",
+				"name": "update dateholder",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
