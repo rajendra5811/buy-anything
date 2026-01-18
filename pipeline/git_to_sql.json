@@ -32,7 +32,7 @@
 						"referenceName": "DelimitedText1",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": "/buy%20anything%20sales.csv"
+							"filename": "buy anything sales.csv"
 						}
 					}
 				]
